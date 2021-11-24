@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess The Color</title>
+    <link rel="stylesheet" href="guessColor.css">
+    <!-- cookie font css : font-family: 'Cookie', cursive;-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Kaushan+Script&display=swap" rel="stylesheet" />
+  
+  <!-- Anton css : font-family: 'Anton', sans-serif;-->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
+  
+  <!-- Bebas Neue Font css : font-family: 'Bebas Neue', cursive; -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;613&family=Poppins:wght@500&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+</head>
+
+<body onload="generateNewColor()">
+    <div class="main">
+        <div class="text">
+            <h1>Guess The Color</h1>
+            <h2 class="color">RGB(255, 255 ,255)</h2>
+        </div>
+        <div class="box">
+            <div class="option1 option"></div>
+            <div class="option2 option"></div>
+            <div class="option3 option"></div>
+            <div class="option4 option"></div>
+            <div class="option5 option"></div>
+            <div class="option6 option"></div>
+            <div class="option7 option"></div>
+            <div class="option8 option"></div>
+            <div class="option9 option"></div>
+            <div class="option10 option medium"></div>
+            <div class="option11 option medium"></div>
+            <div class="option12 option medium"></div>
+            <div class="option13 option medium"></div>
+            <div class="option14 option medium"></div>
+            <div class="option15 option medium"></div>
+            <div class="option16 option medium"></div>
+            <div class="option17 option hard"></div>
+            <div class="option18 option hard"></div>
+            <div class="option19 option hard"></div>
+            <div class="option20 option hard"></div>
+            <div class="option21 option hard"></div>
+            <div class="option22 option hard"></div>
+            <div class="option23 option hard"></div>
+            <div class="option24 option hard"></div>
+            <div class="option25 option hard"></div>
+        </div>
+        <div class="buttons">
+            <button id="newColor" onclick="generateNewColor();">Get New Color</button>
+            <div class="level">
+                <button id="easyLevel" onclick="easy();">Easy</button>
+                <button id="mediumLevel" onclick="medium();">Medium</button>
+                <button id="hardLevel" onclick="hard();">Hard</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="guessColor.js"></script>
+</body>
+
+</html>
