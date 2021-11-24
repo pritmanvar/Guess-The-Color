@@ -56,15 +56,21 @@ for(let i = 1; i <= 25; i++){
 }
 
 function generateNewColor(){
-    const RGB = document.querySelector('.color');
+    const redCircle = document.querySelector('.red');
+    const greenCircle = document.querySelector('.green');
+    const blueCircle = document.querySelector('.blue');
+
     let red = Math.floor(Math.random()*255);
     let green = Math.floor(Math.random()*255);
     let blue = Math.floor(Math.random()*255);
+
+    redCircle.style.backgroundColor = "RGB(" + red + ",0,0)";
+    greenCircle.style.backgroundColor = "RGB(0," + green + ",0)";
+    blueCircle.style.backgroundColor = "RGB(0,0," + blue + ")";
     
     let colorOfAnswer = "RGB(" + red + ", " + green + ", " + blue + ")";
     let color = [];
     color.push(colorOfAnswer);
-    RGB.innerHTML = colorOfAnswer;
     
     ans = ".option" + Math.floor(Math.random()*numberOfOptions+1);
     document.querySelector(ans).style.backgroundColor = colorOfAnswer;

@@ -6,32 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess The Color</title>
-    <link rel="stylesheet" href="guessColor.css">
-    <!-- cookie font css : font-family: 'Cookie', cursive;-->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Kaushan+Script&display=swap" rel="stylesheet" />
-  
-  <!-- Anton css : font-family: 'Anton', sans-serif;-->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet" />
-  
-  <!-- Bebas Neue Font css : font-family: 'Bebas Neue', cursive; -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;613&family=Poppins:wght@500&family=Roboto+Mono:wght@200&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./CSS/guessColor.css">
 </head>
 
 <body onload="generateNewColor()">
     <div class="main">
         <div class="text">
             <h1>Guess The Color</h1>
-            <h2 class="color">RGB(255, 255 ,255)</h2>
+            <div class="color">
+                <span class="red circle"></span>
+                <span>+</span>
+                <span class="green circle"></span>
+                <span>+</span>
+                <span class="blue circle"></span>
+                <span>=</span>
+                <span class="ans circle">?</span>
+            </div>
         </div>
         <div class="box">
             <div class="option1 option"></div>
@@ -69,7 +59,6 @@
             </div>
         </div>
     </div>
-
     <script src="guessColor.js"></script>
 </body>
 
