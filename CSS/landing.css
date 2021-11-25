@@ -1,0 +1,40 @@
+.landing{
+    /* display: none; */
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    background-color: #00000050;
+    backdrop-filter: blur(5px);
+    color: white;
+}
+.hide{
+    animation: hide 0.5s linear 0s 1 forwards;
+}
+@keyframes hide {
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 0%;
+    }
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #00000050;
+    transform: translate(50%,50%);
+    height: 50%;
+    width: 50%;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+.landingLevels{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}

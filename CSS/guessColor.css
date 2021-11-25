@@ -63,20 +63,33 @@ span{
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
     row-gap: 10px;
     column-gap: 10px;
 }
 .option{
-    position: relative;
     background-color: white;
     border-radius: 10px;
     border: 3px solid white;
     cursor: pointer;
 }
-.option:active{
-    top: 5px;
+.select{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: translate(50%,50%) scale(0);
+    height: 50%;
+    width: 50%;
+    margin: 0;
+    padding: 0;
+    border-radius: 15px;
+    border: 2px solid black;
+    color: white;
+    transition: all 0.25s linear;
 }
-.medium, .hard{
+.option:hover > span{
+    transform: translate(50%,50%) scale(1);
+}
+.mediumOptions, .hardOptions{
     display:none;
 }
 .buttons{

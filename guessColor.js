@@ -1,11 +1,17 @@
 let ans = "";
 let numberOfOptions = 9;
+let landing = document.querySelector('.landing');
 let grid = document.querySelector('.box');
 let options = document.querySelectorAll('.option')
-let easyOptions = document.querySelectorAll('.easy');
-let mediumOptions = document.querySelectorAll('.medium');
-let hardOptions = document.querySelectorAll('.hard');
+let mediumOptions = document.querySelectorAll('.mediumOptions');
+let hardOptions = document.querySelectorAll('.hardOptions');
 
+function hideLanding() {
+    landing.classList.add("hide");
+    setTimeout(() => {
+        landing.style.display = "none";
+    }, 500);
+}
 function makeDisplayBlock(options) {
     Array.from(options).forEach((element)=>{
         element.style.display = "block";
@@ -19,6 +25,7 @@ function makeDisplayNone(options) {
 function easy() {
     if(mediumOptions[0].style.display === "block"){
         grid.style.gridTemplateColumns = "repeat(3,1fr)";
+        grid.style.gridTemplateRows = "repeat(3,1fr)";
         makeDisplayNone(mediumOptions);
         makeDisplayNone(hardOptions);
         numberOfOptions = 9;
@@ -28,6 +35,7 @@ function easy() {
 function medium() {
     if(mediumOptions[0].style.display !== "block" || hardOptions[0].style.display === "block"){
         grid.style.gridTemplateColumns = "repeat(4,1fr)";
+        grid.style.gridTemplateRows = "repeat(4,1fr)";
         makeDisplayBlock(mediumOptions);
         makeDisplayNone(hardOptions);
         numberOfOptions = 16;
@@ -37,6 +45,7 @@ function medium() {
 function hard() {
     if(hardOptions[0].style.display !== "block"){
         grid.style.gridTemplateColumns = "repeat(5,1fr)";
+        grid.style.gridTemplateRows = "repeat(5,1fr)";
         makeDisplayBlock(mediumOptions);
         makeDisplayBlock(hardOptions);
         numberOfOptions = 25;
