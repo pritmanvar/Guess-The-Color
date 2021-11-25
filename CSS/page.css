@@ -1,5 +1,5 @@
-.landing{
-    /* display: none; */
+/* CSS for landing, correceGuess and wrondGuess page */
+.page{
     position: absolute;
     height: 100%;
     width: 100%;
@@ -8,7 +8,17 @@
     background-color: #00000050;
     backdrop-filter: blur(5px);
     color: white;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
 }
+.correctGuess{
+    display: none;
+}
+.wrongGuess{
+    display: none;
+}
+
+/* CSS to hide the page */
 .hide{
     animation: hide 0.5s linear 0s 1 forwards;
 }
@@ -20,6 +30,20 @@
         opacity: 0%;
     }
 }
+
+/* CSS to show the page */
+.show{
+    animation: show 0.5s linear 0s 1 forwards;
+}
+@keyframes show {
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+/* For Content in the every page */
 .content{
     display: flex;
     flex-direction: column;
@@ -33,7 +57,7 @@
     border-radius: 50px;
     border: 2px solid black;
 }
-.landingLevels{
+.pageLevels{
     display: flex;
     justify-content: space-between;
     width: 60%;
