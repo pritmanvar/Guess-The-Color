@@ -20,7 +20,7 @@ body{
 
 /* Heading */
 .text{
-    width: 65%;
+    width: max(65%,887px);
     margin: 0px auto 0px auto;
     background-color: rgb(152,153,165);
     border-radius: 20px;
@@ -66,7 +66,7 @@ span{
 /* Options Box */
 .box{
     height: 70%;
-    width: 65%;
+    width: max(65%,887px);
     border-radius: 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -105,7 +105,7 @@ span{
 }
 .buttons{
     display: flex;
-    width: 65%;
+    width: max(65%,887px);
     justify-content: space-between;
 }
 
@@ -113,10 +113,10 @@ span{
 .level{
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    min-width: 40%;
 }
 button {
-    min-width: 100px;
+    min-width: min(30%,100px);
     height: 40px;
     color: #fff;
     padding: 5px 10px;
@@ -136,4 +136,25 @@ button:hover {
 }
 button:active {
     top: 2px;
+}
+
+@media only screen and (max-width: 992px) {
+    .box, .text, .buttons{
+        width: 90%;
+        margin: 5px auto;
+    }
+    .level{
+        margin: 3px 0;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .buttons{
+        flex-direction: column-reverse;
+    }
+    .level{
+        width: 100%;
+    }
+    .option > span{
+        display: none;
+    }
 }

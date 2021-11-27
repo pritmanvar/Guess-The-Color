@@ -21,13 +21,13 @@ function hideLanding() {
 function hideCorrectGuess() {
     correctGuess.classList.add("hide");
     correctGuess.classList.remove("show");
-    correctGuess.style.display = "block";
+    correctGuess.style.display = "flex";
     setTimeout(() => {
         correctGuess.style.display = "none";
     }, 500);
 }
 function showCorrectGuess() {
-    correctGuess.style.display = "block";
+    correctGuess.style.display = "flex";
     correctGuess.classList.add("show");
     correctGuess.classList.remove("hide");
 }
@@ -36,13 +36,13 @@ function showCorrectGuess() {
 function hideWrongGuess() {
     wrongGuess.classList.add("hide");
     wrongGuess.classList.remove("show");
-    wrongGuess.style.display = "block";
+    wrongGuess.style.display = "flex";
     setTimeout(() => {
         wrongGuess.style.display = "none";
     }, 500);
 }
 function showWrongGuess() {
-    wrongGuess.style.display = "block";
+    wrongGuess.style.display = "flex";
     wrongGuess.classList.add("show");
     wrongGuess.classList.remove("hide");
 }
