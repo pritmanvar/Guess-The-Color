@@ -1,6 +1,8 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: black;
+    color: black;
 }
 
 /* Main container */
@@ -13,8 +15,6 @@ body{
     height: 100vh;
     margin: 0%;
     padding: 0%;
-    background-color: black;
-    color: black;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -156,5 +156,8 @@ button:active {
     }
     .option > span{
         display: none;
+    }
+    .main{
+        height: 90vh;
     }
 }
